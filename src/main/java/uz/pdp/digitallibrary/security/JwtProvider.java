@@ -42,7 +42,7 @@ public class JwtProvider {
                 .setSubject(user.getUsername())
                 .claim("role", role)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + expirationDate*ONE_DAY_IN_MILLISECONDS))
+                .setExpiration(new Date(System.currentTimeMillis() + expirationDate*120_000))
                 .compact();
 
     }
